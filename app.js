@@ -43,5 +43,8 @@ new Client({
     prefix: "..",
     cmdEditing: true,
     typing: true,
+    commandLogging: true,
+    noPrefixDM: true,
+    production: process.env.DEBUG,
     readyMessage: (client) => `${client.user.tag}, Ready to serve ${client.guilds.size} guilds and ${client.users.size} users`
 }).login(process.env.TOKEN);
