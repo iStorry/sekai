@@ -232,7 +232,42 @@ module.exports = class extends Language {
             COMMAND_PREFIX_DESCRIPTION: "Allows Admins and above to change a guild's prefix.",
             COMMAND_SHARDS_DESCRIPTION: "Check all the detailed shards information.",
             COMMAND_UPVOTE_DESCRIPTION: "Vote for ot on DBL and gain access to limited features in a second.",
+
+            ER_NO_DM: "Can't send Direct Message to you because your DMs are not open.",
+
+            MUSIC_NOT_PLAYING: "There is currently no music playing, queue up some songs to get the party going!",
+            MUSICIF_NOW_PLAYING_TITLE: "Now Playing",
+            MUSICIF_TITLE: "Title",
+            MUSICIF_AUTHOR: "Author",
+            MUSICIF_SONG_LENGHT: "Duration",
+            MUSICIF_SONG_REQUESTED_BY: "Requested by",
+            MUSICIF_SONG_LINK: "Link",
+            MUSICIF_QUEUE_HINT: "Scroll between pages to see the song queue.",
+            MUSICIF_QUEUE_TITLE: "Use the reactions to change pages, select a page, or stop viewing the queue",
+            MUSICIF_QUEUE_LOADING: "Loading Queue...",
+            MUSICIF_NO_VOICE_CHANNEL: "You're currently not in a voice channel or there was an error, try again.",
+            MUSICIF_TOGGLE_SONG_LOOP: "Toggled single song repeat.",
+            MUSICIF_TOGGLE_QUEUE_LOOP: "Now all queue will repeat.",
+            MUSIC_NO_SONGS_IN_QUEUE: "There are no songs queued up. Queue up some songs!",
+            COMMAND_MUSIC_LOOP_MAX_QUEUE: "Sorry but the maximum queue size is 1000 songs.",
+            COMMAND_DMSONG_DESCRIPTION: "Make sekai send you the current song in your DMs.",
+            COMMAND_DUMP_DESCRIPTION: "Dump your server queue in raw format to be used later!",
+            COMMAND_LOOP_DESCRIPTION: "Loop a song so it repeats when it finishes playing.",
+
+            // Music Commands
+            COMMAND_LYRICS_DESCRIPTION: "Get a song's lyrics directly.",
+            COMMAND_MUSIC_DESCRIPTION: "Detailed information for all Music Commands.",
+            COMMAND_NOWPLAYING_DESCRIPTION: "Know which song is currently playing and what is it's progress.",
+            COMMAND_PLAY_DESCRIPTION: "Play Songs from YouTube/Twitch/SoundCloud/Mixer/Live Streams, etc.",
+            COMMAND_SHUFFLE_DESCRIPTION: "Shuffle songs in the queue to be randomized.",
+            COMMAND_QUEUE_DESCRIPTION: "See the current song queue in an interactive manner",
+            COMMAND_SKIP_DESCRIPTION: "Skip the current song or call a vote skip if there are more than 3 members in the VC.",
+            COMMAND_STOP_DESCRIPTION: "Stop and Clear the queue if you're only one listening.",
+            COMMAND_MAKE_DJ_DESCRPTION: "Allows guild managers, admins to add/remove new dj.",
+            COMMAND_LEAVE_DESCRIPTION: "Make forcefully leave your Voice Channel.",
+            COMMAND_PAUSE_DESCRIPTION: "Pause/Resume the currently playing music.",
+            COMMAND_VOLUME_DESCRIPTION: "Change the default volume in your guild",
         };
     }
 
-};
+}; 

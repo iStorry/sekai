@@ -1,4 +1,5 @@
 const { Client } = require('klasa');
+const MusicManager = require('./lib/structures/MusicManager');
 
 require('dotenv').config();
 
@@ -63,6 +64,7 @@ new Client({
     presence: { activity: { name: '.help', type: 'LISTENING' } },
     regexPrefix: /^(hey )?meow(,|!)/i,
     production: process.env.DEBUG,
+    music: new MusicManager(),
     readyMessage: (client) => `${client.user.tag}, Ready to serve ${client.guilds.size} guilds and ${client.users.size} users`
     
 }).login(process.env.TOKEN);

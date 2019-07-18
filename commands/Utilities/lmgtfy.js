@@ -3,7 +3,7 @@ const { Command } = require('klasa');
 module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
-            name: 'Let Me Google For You',
+            name: 'google',
             runIn: ["text", "dm"],
             cooldown: 5,
             aliases: ["letmegoogleitforyou", "google"],
