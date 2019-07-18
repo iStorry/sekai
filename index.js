@@ -5,7 +5,6 @@ const { version } = require("./package.json");
 module.exports = {
     ...klasa,
     ...discord,
-    util: require("./lib/util/Util"),
     klasaUtil: klasa.util,
     discordUtil: discord.Util,
     version,
