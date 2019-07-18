@@ -61,7 +61,7 @@ new Client({
     commandLogging: true,
     noPrefixDM: true,
     console: { useColor: true, utc: true },
-    presence: { activity: { name: '.help', type: 'LISTENING' } },
+    presence: { activity: { name: '..help', type: 'LISTENING' } },
     regexPrefix: /^(hey )?meow(,|!)/i,
     production: process.env.DEBUG,
     music: new MusicManager(),
