@@ -82,7 +82,7 @@ module.exports = class extends Command {
             case "[I] Grand Champion": return `./assets/rocketleague/ranks/champion /grandchampion.png`;
             /// Champion
             case "[III] Champion III": case "[II] Champion III": case "[I] Champion III": return `./assets/rocketleague/ranks/champion/champion3.png`;
-            case "[III] Champion II": case "[II] Champion II": case "[I] Champion II": return `./assets/rocketleague/ranks/champion/champion2.png`;
+            case "[III] Champion III": case "[II] Champion II": case "[I] Champion II": return `./assets/rocketleague/ranks/champion/champion2.png`;
             case "[III] Champion I": case "[II] Champion I": case "[I] Champion I": return `./assets/rocketleague/ranks/champion/champion1.png`;
             /// Diamond
             case "[III] Diamond III": case "[II] Diamond III": case "[I] Diamond III": return `./assets/rocketleague/ranks/diamond/diamond3.png`;
