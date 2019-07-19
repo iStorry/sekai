@@ -33,7 +33,7 @@ module.exports = class extends Command {
         let platformName = body.platformName;
         let stats = body.stats;
         let hoops = stats.filter(data => data.label == "Hoops");
-
+        console.log(hoops);
         if (!hoops[0]) return msg.send(`** No Hoops Data**`);
         /// Rough
         let rankLabel = hoops[0].subLabel.split("]");
@@ -81,29 +81,29 @@ module.exports = class extends Command {
             /// Grand Champion
             case "[I] Grand Champion": return `./assets/rocketleague/ranks/champion /grandchampion.png`;
             /// Champion
-            case "[III] Champion III": case "[II] Champion III": case "[I] Champion III": return `./assets/rocketleague/ranks/champion/champion3.png`;
-            case "[III] Champion III": case "[II] Champion II": case "[I] Champion II": return `./assets/rocketleague/ranks/champion/champion2.png`;
-            case "[III] Champion I": case "[II] Champion I": case "[I] Champion I": return `./assets/rocketleague/ranks/champion/champion1.png`;
+            case "[IV] Champion III": case "[III] Champion III": case "[II] Champion III": case "[I] Champion III": return `./assets/rocketleague/ranks/champion/champion3.png`;
+            case "[IV] Champion II": case "[III] Champion II": case "[II] Champion II": case "[I] Champion II": return `./assets/rocketleague/ranks/champion/champion2.png`;
+            case "[IV] Champion I": case "[III] Champion I": case "[II] Champion I": case "[I] Champion I": return `./assets/rocketleague/ranks/champion/champion1.png`;
             /// Diamond
-            case "[III] Diamond III": case "[II] Diamond III": case "[I] Diamond III": return `./assets/rocketleague/ranks/diamond/diamond3.png`;
-            case "[III] Diamond II": case "[II] Diamond II": case "[I] Diamond II": return `./assets/rocketleague/ranks/diamond/diamond2.png`;
-            case "[III] Diamond I": case "[II] Diamond I": case "[I] Diamond I": return `./assets/rocketleague/ranks/diamond/diamond1.png`;
+            case "[IV] Diamond III": case "[III] Diamond III": case "[II] Diamond III": case "[I] Diamond III": return `./assets/rocketleague/ranks/diamond/diamond3.png`;
+            case "[IV] Diamond II": case "[III] Diamond II": case "[II] Diamond II": case "[I] Diamond II": return `./assets/rocketleague/ranks/diamond/diamond2.png`;
+            case "[IV] Diamond I": case "[III] Diamond I": case "[II] Diamond I": case "[I] Diamond I": return `./assets/rocketleague/ranks/diamond/diamond1.png`;
             /// Platinum
-            case "[III] Platinum III": case "[II] Platinum III": case "[I] Platinum III": return `./assets/rocketleague/ranks/platinum/platinum3.png`;
-            case "[III] Platinum II": case "[II] Platinum II": case "[I] Platinum II": return `./assets/rocketleague/ranks/platinum/platinum2.png`;
-            case "[III] Platinum I": case "[II] Platinum I": case "[I] Platinum I": return `./assets/rocketleague/ranks/platinum/platinum1.png`;
+            case "[IV] Platinum III": case "[III] Platinum III": case "[II] Platinum III": case "[I] Platinum III": return `./assets/rocketleague/ranks/platinum/platinum3.png`;
+            case "[IV] Platinum II": case "[III] Platinum II": case "[II] Platinum II": case "[I] Platinum II": return `./assets/rocketleague/ranks/platinum/platinum2.png`;
+            case "[IV] Platinum I": case "[III] Platinum I": case "[II] Platinum I": case "[I] Platinum I": return `./assets/rocketleague/ranks/platinum/platinum1.png`;
             /// Gold
-            case "[III] Gold I": case "[II] Gold I": case "[I] Gold I": return `./assets/rocketleague/ranks/gold/gold3.png`;
-            case "[III] Gold I": case "[II] Gold I": case "[I] Gold I": return `./assets/rocketleague/ranks/gold/gold2.png`;
-            case "[III] Gold I": case "[II] Gold I": case "[I] Gold I": return `./assets/rocketleague/ranks/gold/gold1.png`;
+            case "[IV] Gold III": case "[III] Gold III": case "[II] Gold III": case "[I] Gold III": return `./assets/rocketleague/ranks/gold/gold3.png`;
+            case "[IV] Gold II": case "[III] Gold II": case "[II] Gold II": case "[I] Gold III": return `./assets/rocketleague/ranks/gold/gold2.png`;
+            case "[IV] Gold I": case "[III] Gold I": case "[II] Gold I": case "[I] Gold I": return `./assets/rocketleague/ranks/gold/gold1.png`;
             /// Silver
-            case "[III] Silver I": case "[II] Silver I": case "[I] Silver I": return `./assets/rocketleague/ranks/silver/silver3.png`;
-            case "[III] Silver I": case "[II] Silver I": case "[I] Silver I": return `./assets/rocketleague/ranks/silver/silver2.png`;
-            case "[III] Silver I": case "[II] Silver I": case "[I] Silver I": return `./assets/rocketleague/ranks/silver/silver1.png`;
+            case "[IV] Silver III": case "[III] Silver III": case "[II] Silver III": case "[I] Silver III": return `./assets/rocketleague/ranks/silver/silver3.png`;
+            case "[IV] Silver II": case "[III] Silver II": case "[II] Silver II": case "[I] Silver II": return `./assets/rocketleague/ranks/silver/silver2.png`;
+            case "[IV] Silver I": case "[III] Silver I": case "[II] Silver I": case "[I] Silver I": return `./assets/rocketleague/ranks/silver/silver1.png`;
             /// Bronze
-            case "[III] Bronze I": case "[II] Bronze I": case "[I] Bronze I": return `./assets/rocketleague/ranks/bronze/bronze3.png`;
-            case "[III] Bronze I": case "[II] Bronze I": case "[I] Bronze I": return `./assets/rocketleague/ranks/bronze/bronze2.png`;
-            case "[III] Bronze I": case "[II] Bronze I": case "[I] Bronze I": return `./assets/rocketleague/ranks/bronze/bronze1.png`;
+            case "[IV] Bronze III": case "[III] Bronze III": case "[II] Bronze III": case "[I] Bronze III": return `./assets/rocketleague/ranks/bronze/bronze3.png`;
+            case "[IV] Bronze II": case "[III] Bronze II": case "[II] Bronze II": case "[I] Bronze II": return `./assets/rocketleague/ranks/bronze/bronze2.png`;
+            case "[IV] Bronze I": case "[III] Bronze I": case "[II] Bronze I": case "[I] Bronze I": return `./assets/rocketleague/ranks/bronze/bronze1.png`;
             /// Unranked
             case "[I] Unranked": return `./assets/rocketleague/ranks/unranked/unranked.png`;
         }
