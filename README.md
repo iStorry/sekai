@@ -14,13 +14,14 @@
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew -v
+
 Homebrew 2.1.7
 Homebrew/homebrew-core (git revision 2a8b; last commit 2019-07-15)
 Homebrew/homebrew-cask (git revision 82630e; last commit 2019-07-16)
 ```
 ### Install Node 
 ```
-brew install node
+$ brew install node
 $ echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.bash_profile
 $ echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.bash_profile
 ```
