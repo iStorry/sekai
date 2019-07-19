@@ -12,7 +12,7 @@ module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
             name: 'hoops',
-            permissionLevel: 10,
+            permissionLevel: 0,
             runIn: ['text'],
             description: 'Hoops Rank.',
             usage: "<platform:string> <username:string>",
