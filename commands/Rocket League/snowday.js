@@ -11,10 +11,10 @@ module.exports = class extends Command {
 
     constructor(...args) {
         super(...args, {
-            name: 'hoops',
+            name: 'snowday',
             permissionLevel: 0,
             runIn: ['text'],
-            description: 'Hoops Rank.',
+            description: 'Snowday Rank.',
             usage: "<platform:string> <username:string>",
             usageDelim: " ",
         });
