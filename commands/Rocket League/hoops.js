@@ -13,7 +13,7 @@ module.exports = class extends Command {
         super(...args, {
             name: 'hoops',
             permissionLevel: 0,
-            runIn: ['text'],
+            runIn: ['text', 'dm'],
             description: 'Hoops Rank.',
             usage: "<platform:string> <username:string>",
             usageDelim: " ",
@@ -30,10 +30,9 @@ module.exports = class extends Command {
         /// API Parser
         let rawname = body.platformUserHandle;
         let userID = body.platformUserId;
-        let platformName = body.platformName;
         let stats = body.stats;
+
         let hoops = stats.filter(data => data.label == "Hoops");
-        console.log(hoops);
         if (!hoops[0]) return msg.send(`** No Hoops Data**`);
         /// Rough
         let rankLabel = hoops[0].subLabel.split("]");
@@ -66,9 +65,9 @@ module.exports = class extends Command {
 
     async platformCode(platform) {
         switch (platform) {
-            case "ps": case "ps4": return 2;
-            case "steam": case "pc": return 3;
-            case "xbox": case "xbx": return 1;
+            case "ps": case "ps4": case "Ps4": case "PS4": return 2;
+            case "steam": case "pc": case "Pc": case "PC": return 3;
+            case "xbox": case "xbx": case "Xbox": return 1;
         }
     }
 

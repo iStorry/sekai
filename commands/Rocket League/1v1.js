@@ -11,10 +11,11 @@ module.exports = class extends Command {
 
     constructor(...args) {
         super(...args, {
-            name: 'snowday',
+            name: '1v1',
+            aliases: ['1s', '1v1', 'solo', 'duel'],
             permissionLevel: 0,
             runIn: ['text', 'dm'],
-            description: 'Snowday Rank.',
+            description: 'Solo Rank.',
             usage: "<platform:string> <username:string>",
             usageDelim: " ",
         });
@@ -30,20 +31,19 @@ module.exports = class extends Command {
         /// API Parser
         let rawname = body.platformUserHandle;
         let userID = body.platformUserId;
-        let platformName = body.platformName;
         let stats = body.stats;
-        let snowday = stats.filter(data => data.label == "Snowday");
-        console.log(snowday);
-        if (!snowday[0]) return msg.send(`** No Snowday Data**`);
+
+        let solo = stats.filter(data => data.label == "Ranked Duel 1v1");
+        if (!solo[0]) return msg.send(`** No Solo Rank Data**`);
         /// Rough
-        let rankLabel = snowday[0].subLabel.split("]");
-        let rankMain = rankLabel[1] ? rankLabel[1] + ` (${snowday[0].displayValue})` : "Unknown";
+        let rankLabel = solo[0].subLabel.split("]");
+        let rankMain = rankLabel[1] ? rankLabel[1] + ` (${solo[0].displayValue})` : "Unknown";
         /// Design Config
         let fontColor = "#FFFFFF";
         try {
 
         const bg = await this.getBase();
-        const rank = await this.ranksIcon(snowday[0].subLabel);
+        const rank = await this.ranksIcon(solo[0].subLabel);
         const img = await new Canvas(400, 100)
             .addImage(bg, 0, 0, 400, 180)
             .setColor(fontColor)
@@ -53,18 +53,20 @@ module.exports = class extends Command {
             .addText(rankMain ? rankMain : "", 22, 72.5)
             .addImage(rank, 290, 5, 100, 100)
             .setTextFont("18px 'Roboto Condensed'")
-            .addText(snowday[0].subLabel, 35, 140)
+            .addText(solo[0].subLabel, 35, 140)
             .toBufferAsync();
             return msg.send({ files: [{ attachment: img, name: `${userID}.png` }] });
         } catch (e) {
             console.error(e);
             return msg.send(`***Oopsies, an error occoured, please try again!***`);
         }
+        //let username = 
+
     };
 
     async platformCode(platform) {
         switch (platform) {
-            case "ps": case "ps4": case "Ps4": case "PS4": return 2;
+            case "ps": case "ps4": case "Ps4": case "PS4": case "Ps": return 2;
             case "steam": case "pc": case "Pc": case "PC": return 3;
             case "xbox": case "xbx": case "Xbox": return 1;
         }
