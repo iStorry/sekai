@@ -79,7 +79,7 @@ module.exports = class extends Command {
     async ranksIcon(label) {
         switch (label) {
             /// Grand Champion
-            case "[I] Grand Champion": return `./assets/rocketleague/ranks/champion /grandchampion.png`;
+            case "[I] Grand Champion": return `./assets/rocketleague/ranks/champion/grandchampion.png`;
             /// Champion
             case "[IV] Champion III": case "[III] Champion III": case "[II] Champion III": case "[I] Champion III": return `./assets/rocketleague/ranks/champion/champion3.png`;
             case "[IV] Champion II": case "[III] Champion II": case "[II] Champion II": case "[I] Champion II": return `./assets/rocketleague/ranks/champion/champion2.png`;
