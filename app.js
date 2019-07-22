@@ -55,7 +55,7 @@ new Client({
     clientOptions: {
         fetchAllMembers: false
     },
-    prefix: ".",
+    prefix: "..",
     cmdEditing: true,
     typing: true,
     commandLogging: true,
