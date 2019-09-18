@@ -17,17 +17,17 @@
   "author": "Jatin",
   "license": "ISC",
   "dependencies": {
-    "canvas": "^2.5.0",
+    "canvas"
     "canvas-constructor": "github:kyranet/canvasConstructor",
     "discord.js": "github:discordjs/discord.js",
-    "dotenv": "^8.0.0",
-    "fs-nextra": "^0.4.5",
+    "dotenv"
+    "fs-nextra"
     "klasa": "github:dirigeants/klasa#master",
-    "node-opus": "^0.3.2",
-    "rethinkdbdash": "^2.3.31",
-    "snekfetch": "^4.0.4",
-    "ytdl-core": "^0.29.3",
-    "ytdl-core-discord": "^1.0.3",
+    "node-opus"
+    "rethinkdbdash"
+    "snekfetch"
+    "ytdl-core"
+    "ytdl-core-discord"
     "breadtags": "github:PenguBot/bread-tags"
   },
   "devDependencies": {
